@@ -10,7 +10,7 @@
 
 1. Implementation
 ```gradle
-implementation 'net.webilisim.webplayer:1.0.11'
+implementation 'net.webilisim.webplayer:webplayer:1.0.11'
 ```
 
 2. Set player in your XML
