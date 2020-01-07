@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tips_not_wifi">You are currently using mobile data, which can lead to high data loss</string>
+    <string name="tips_not_wifi_confirm">Continue</string>
+    <string name="tips_not_wifi_cancel">Stop</string>
+    <string name="no_url">Video not found</string>
+    <string name="replay">Replay</string>
+    <string name="click_to_restart">Click here to try again</string>
+    <string name="video_loading_failed">Video could not loaded</string>
+</resources>

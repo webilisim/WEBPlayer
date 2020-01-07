@@ -1,0 +1,55 @@
+apply plugin: 'com.novoda.bintray-release'
+apply plugin: 'com.android.library'
+
+ext {
+
+    bintrayRepo = "WEBPlayer"
+    bintrayName = "net.webilisim.webplayer"
+    libraryName = "webplayer"
+
+    publishedGroupId = "net.webilisim.webplayer"
+    artifact = "webplayer"
+    libraryVersion = "1.0.11"
+
+    libraryDescription = "Android video player supports mp3, mp4, m3u8 and more formats."
+    siteUrl = "https://github.com/webilisim/WEBPlayer"
+    gitUrl = "https://github.com/webilisim/WEBPlayer.git"
+    developerId = "webilisim"
+    developerName = "We Bilişim"
+    developerEmail = "info@webilisim.net"
+
+    licenseName = "MIT"
+    licenseUrl = "http://opensource.org/licenses/MIT"
+    allLicenses = ["MIT"]
+
+}
+
+android {
+    compileSdkVersion 29
+
+    defaultConfig {
+        minSdkVersion 16
+        targetSdkVersion 29
+        versionCode 11
+        versionName "1.0.11"
+    }
+
+    compileOptions {
+        sourceCompatibility 1.8
+        targetCompatibility 1.8
+    }
+    lintOptions {
+        abortOnError false
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    testImplementation 'junit:junit:4.12'
+    compileOnly 'androidx.appcompat:appcompat:1.1.0'
+}
+
+if(project.rootProject.file('local.properties').exists()){
+    apply from: 'installv1.gradle'
+    apply from: 'bintrayv1.gradle'
+}
