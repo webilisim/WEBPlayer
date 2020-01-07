@@ -1,5 +1,6 @@
-apply plugin: 'com.novoda.bintray-release'
 apply plugin: 'com.android.library'
+apply plugin: 'com.jfrog.bintray'
+apply plugin: 'com.github.dcendents.android-maven'
 
 ext {
 
@@ -50,6 +51,6 @@ dependencies {
 }
 
 if(project.rootProject.file('local.properties').exists()){
-    apply from: 'installv1.gradle'
-    apply from: 'bintrayv1.gradle'
+    apply from: 'https://raw.githubusercontent.com/webilisim/WEBPlayer/master/webplayer/installv1.gradle'
+    apply from: 'https://raw.githubusercontent.com/webilisim/WEBPlayer/master/webplayer/bintrayv1.gradle'
 }
