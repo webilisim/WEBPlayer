@@ -44,6 +44,7 @@ bintray {
         desc = libraryDescription
         websiteUrl = siteUrl
         vcsUrl = gitUrl
+        userOrg = 'netwebilisim'
         licenses = allLicenses
         publish = true
         publicDownloadNumbers = true
